@@ -3,6 +3,7 @@ A minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.
 """
 
 import requests
+import json
 
 
 class Api:
@@ -29,14 +30,6 @@ class Api:
         :param int episode: Episode to return a `series` result for.
         :return: A list of IMDb objects that match the search.
 
-        Important Notes: Although `search_string`, `imdb_id`, and `title` are all optional, at least one must be chosen or an error will be returned.
-        Through testing, it appears that there is a priority order. In other words, if one is provided, it will take priority of the others that are provided.
-        This theory can be tested easily by providing three different examples and verifying the results. The priority is as follows: `search_string` > `title` > `imdb_id`.
-        Keep in mind that the `release_year` greatly affects the results as well. For example, if you search "terminator" and the year "1984",
-        you will get "The Terminator" (`imdb_id` = tt0088247). However, if you search "terminator" with the year "1985", you will get "Ninja Terminator" (`imdb_id` = tt0199849)
-
-        Finally, you can receive more than one object as the result of a search. For example, if you search "terminator" with the year "2002", you will get
-        "The Terminator: Dawn of Fate" (`imdb_id` = tt0320595) and "Terminator: A Short Film About JT LeRoy" (`imdb_id` = tt7108520)
         """
 
         payload = {
@@ -54,6 +47,14 @@ class Api:
             'v': self._api_version
         }
 
-        response = requests.get(url=self._api_url, params=payload)
+        response = requests.get(url=self._url, params=payload)
 
         return response
+
+
+if __name__ == '__main__':
+    # Get your free API key at https://www.omdbapi.com/apikey.aspx
+    # You can use mine, but you'll be sharing it with other users of this library!
+    omdb_api = Api(apikey='7b7c7bc4')
+    result = omdb_api.search(search_string='terminator', release_year='1984')
+    print(json.dumps(result.json(), indent=4))
