@@ -35,7 +35,7 @@ setuptools.setup(
     install_requires=requirements,
     keywords='omdb api imdb movies television',
     classifiers=[
-        'Development Status :: 1 - Alpha'
+        'Development Status :: 1 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
