@@ -8,10 +8,10 @@ setuptools.setup(
     version="0.1.0",
     author="blairg23",
     author_email="blair@intelligen.technology",
-    description="`omdb` is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/)",
+    description="omdbpy is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/blairg23/omdb/",
+    url="https://github.com/blairg23/omdbpy/",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

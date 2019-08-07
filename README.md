@@ -1,8 +1,8 @@
-omdb
+omdbpy
 
 ---
 
-`omdb` is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/).
+`omdbpy` is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/).
 
 # Usage
 
