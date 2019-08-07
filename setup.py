@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="omdbpy",
-    version="0.1.0",
+    version="0.1.2",
     author="blairg23",
     author_email="blair@intelligen.technology",
-    description="omdbpy is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/)",
+    description="A minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/).",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/blairg23/omdbpy/",
