@@ -27,7 +27,7 @@ setuptools.setup(
     author=pkg['__author__'],
     author_email=pkg['__email__'],
     description=pkg['__description__'],
-    long_description=long_description,
+    long_description=readme,
     long_description_content_type='text/markdown',
     packages=setuptools.find_packages('src'),
     package_dir={'': 'src'},
