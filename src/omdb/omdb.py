@@ -9,6 +9,11 @@ import json
 class Api:
 
     def __init__(self, apikey, api_version='1'):
+        """
+
+        :param str apikey: Valid OMDb API key credentials.
+        :param str api_version: API version (reserved for future use). Default value: 1
+        """
         self._apikey = apikey
         self._api_version = api_version
         self._url = 'https://www.omdbapi.com/'
@@ -16,19 +21,18 @@ class Api:
     def search(self, search_string=None, imdb_id=None, title=None, result_type=None, release_year=None, plot='full', return_type='json', page=None, callback=None, season=None, episode=None):
         """
 
-        :param string search_string: Any search phrase that might identify a possible movie title. [optional]
-        :param string imdb_id: A valid IMDb ID (e.g. tt1285016). [optional]
-        :param string title: Movie title to search for. [optional]
-        :param string result_type: Type of result to return. [optional]. Valid Options: [`movie`, `series`, `episode`]
-        :param string release_year: Year of release. [optional]
-        :param string plot: Return short or full plot. Default value: short. Valid Options: [`short`, `full`]
-        :param string return_type: The data type to return. Default value: json. Valid Options: [`json`, `xml`]
+        :param str search_string: Any search phrase that might identify a possible movie title. [optional]
+        :param str imdb_id: A valid IMDb ID (e.g. tt1285016). [optional]
+        :param str title: Movie title to search for. [optional]
+        :param str result_type: Type of result to return. [optional]. Valid Options: [`movie`, `series`, `episode`]
+        :param str release_year: Year of release. [optional]
+        :param str plot: Return short or full plot. Default value: short. Valid Options: [`short`, `full`]
+        :param str return_type: The data type to return. Default value: json. Valid Options: [`json`, `xml`]
         :param int page: Page number to return (for paginated results). [optional]
-        :param string callback: JSONP callback name. [optional]
-        :param string api_version: API version (reserved for future use). Default value: 1
+        :param str callback: JSONP callback name. [optional]
         :param int season: Season to return a `series` result for.
         :param int episode: Episode to return a `series` result for.
-        :return: A list of IMDb objects that match the search.
+        :return: An HTTP `requests` response object containing a list of IMDb objects that match the search criteria.
 
         """
 
@@ -52,9 +56,9 @@ class Api:
         return response
 
 
-if __name__ == '__main__':
-    # Get your free API key at https://www.omdbapi.com/apikey.aspx
-    # You can use mine, but you'll be sharing it with other users of this library!
-    omdb_api = Api(apikey='7b7c7bc4')
-    result = omdb_api.search(search_string='terminator', release_year='1984')
-    print(json.dumps(result.json(), indent=4))
+# if __name__ == '__main__':
+#     # Get your free API key at https://www.omdbapi.com/apikey.aspx
+#     # You can use mine, but you'll be sharing it with other users of this library!
+#     omdb_api = Api(apikey='7b7c7bc4')
+#     result = omdb_api.search(search_string='terminator', release_year='1984')
+#     print(json.dumps(result.json(), indent=4))

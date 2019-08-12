@@ -28,10 +28,9 @@ setuptools.setup(
     author_email=pkg['__email__'],
     description=pkg['__description__'],
     long_description=readme,
-    long_description_content_type='text/markdown',
     packages=setuptools.find_packages('src'),
     package_dir={'': 'src'},
-    include_pacakge_data=True,
+    include_package_data=True,
     install_requires=requirements,
     keywords='omdb api imdb movies television',
     classifiers=[

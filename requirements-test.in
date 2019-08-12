@@ -1,0 +1,6 @@
+coverage
+faker
+pytest-cov
+pytest
+tox
+twine
