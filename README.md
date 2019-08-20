@@ -1,10 +1,25 @@
-omdbpy
+[![Current Version on
+PyPI](https://img.shields.io/pypi/v/omdbpy?style=for-the-badge&logo=pypi&label=Version)](https://pypi.org/project/omdbpy/)
+[![PyPI Format](https://img.shields.io/pypi/format/omdbpy?style=for-the-badge&logo=pypi&label=Format)](https://pypi.org/project/omdbpy/)
+[![PyPI Status](https://img.shields.io/pypi/status/omdbpy?style=for-the-badge&logo=pypi&label=Status)](https://pypi.org/project/omdbpy/)
+[![Supported Python
+Versions](https://img.shields.io/pypi/pyversions/omdbpy?style=for-the-badge&logo=pypi)](https://pypi.org/project/omdbpy/)
+[![Build](https://img.shields.io/travis/com/blairg23/omdbpy?style=for-the-badge&logo=travis)](https://travis-ci.com/blairg23/omdbpy)
+[![Coverage](https://img.shields.io/coveralls/github/blairg23/omdbpy?style=for-the-badge&logo=coverage)](https://coveralls.io/github/blairg23/omdbpy)
+[![License](https://img.shields.io/pypi/l/omdbpy?style=for-the-badge&logo=pypi)](https://github.com/blairg23/omdbpy)
+[![Code style:
+black](https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge)](https://github.com/psf/black)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/blairg23/omdbpy?style=for-the-badge&logo=github)](https://github.com/blairg23/omdbpy/commits/)
+[![GitHub Latest Release](https://img.shields.io/github/release-date/blairg23/omdbpy?style=for-the-badge&logo=github)](https://github.com/blairg23/omdbpy/releases)
+[![GitHub Commits Since Last Release](https://img.shields.io/github/commits-since/blairg23/omdbpy/latest?style=for-the-badge&logo=github&label=Commits%20Since%20Last%20Release)](https://github.com/blairg23/omdbpy/commits/)
+
+# omdbpy
 
 ---
 
 `omdbpy` is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/).
 
-# Usage
+## Usage
 
 ### Search by `search_terms`
 ```
@@ -270,4 +285,14 @@ Finally, if the request doesn't make sense, you will get a response with a messa
     "Response": "False",
     "Error": "Something went wrong."
 }
+```
+
+---
+
+## Testing
+
+To run linting via `flake8` and `pylint`, formatting via `black`, unit tests via `pytest`, get a `coverage` report, and build via `sdist` on all support versions of Python, run the following command:
+
+```
+$ tox
 ```
