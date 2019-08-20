@@ -15,9 +15,21 @@ black](https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-
 
 # omdbpy
 
----
-
 `omdbpy` is a minimalist Python wrapper for the Open Movie Database (OMDb) API (https://www.omdbapi.com/).
+
+## Installation
+
+```
+$ pip install omdbpy
+```
+
+## Testing
+
+To run linting via `flake8` and `pylint`, formatting via `black`, unit tests via `pytest`, get a `coverage` report, and build via `sdist` on all support versions of Python, run the following command:
+
+```
+$ tox
+```
 
 ## Usage
 
@@ -285,14 +297,4 @@ Finally, if the request doesn't make sense, you will get a response with a messa
     "Response": "False",
     "Error": "Something went wrong."
 }
-```
-
----
-
-## Testing
-
-To run linting via `flake8` and `pylint`, formatting via `black`, unit tests via `pytest`, get a `coverage` report, and build via `sdist` on all support versions of Python, run the following command:
-
-```
-$ tox
 ```
