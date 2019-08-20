@@ -1,49 +1,18 @@
-import os
-import setuptools
+# -*- coding: utf-8 -*-
+import textwrap
 
+from setuptools import setup
 
-def read(filename):
-    with open(os.path.join(os.path.dirname(__file__), filename)) as filepath:
-        return filepath.read()
-
-
-def parse_requirements(filename):
-    return [line.strip()
-            for line in read(filename).strip().split('\n')
-            if line.strip()]
-
-
-pkg = {}
-exec(read('src/omdb/__pkg__.py'), pkg)
-
-readme = read('README.md')
-requirements = parse_requirements('requirements.txt')
-
-setuptools.setup(
-    name=pkg['__package_name__'],
-    version=pkg['__version__'],
-    url=pkg['__url__'],
-    license=pkg['__license__'],
-    author=pkg['__author__'],
-    author_email=pkg['__email__'],
-    description=pkg['__description__'],
-    long_description=readme,
-    packages=setuptools.find_packages('src'),
-    package_dir={'': 'src'},
-    include_package_data=True,
-    install_requires=requirements,
-    keywords='omdb api imdb movies television',
-    classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Environment :: Web Environment',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-    ],
+setup(
+    use_scm_version={
+        "write_to": "src/omdb/version.py",
+        "write_to_template": textwrap.dedent(
+            """
+             # coding: utf-8
+             from __future__ import unicode_literals
+             __version__ = {version!r}
+             """
+        ).lstrip(),
+    },
+    package_dir={"": "src"},
 )

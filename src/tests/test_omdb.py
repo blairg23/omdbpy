@@ -3,14 +3,16 @@ from unittest import mock, TestCase
 import faker
 import omdb
 
-module_under_test = 'omdb'
+module_under_test = "omdb"
 
 fake = faker.Faker()
 
 
 class ApiTestCase(TestCase):
     def setUp(self):
-        self.mock_requests_patch = mock.patch(f'{module_under_test}.omdb.requests', autospec=True)
+        self.mock_requests_patch = mock.patch(
+            f"{module_under_test}.omdb.requests", autospec=True
+        )
         self.mock_requests = self.mock_requests_patch.start()
 
         self._apikey = fake.word

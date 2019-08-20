@@ -6,8 +6,7 @@ import requests
 
 
 class Api:
-
-    def __init__(self, apikey, api_version='1'):
+    def __init__(self, apikey, api_version="1"):
         """
 
         :param str apikey: Valid OMDb API key credentials.
@@ -15,9 +14,22 @@ class Api:
         """
         self._apikey = apikey
         self._api_version = api_version
-        self._url = 'https://www.omdbapi.com/'
+        self._url = "https://www.omdbapi.com/"
 
-    def search(self, search_terms=None, imdb_id=None, title=None, result_type=None, release_year=None, plot='full', return_type='json', page=None, callback=None, season=None, episode=None):
+    def search(
+        self,
+        search_terms=None,
+        imdb_id=None,
+        title=None,
+        result_type=None,
+        release_year=None,
+        plot="full",
+        return_type="json",
+        page=None,
+        callback=None,
+        season=None,
+        episode=None,
+    ):
         """
 
         :param str search_terms: Any search phrase that might identify a possible movie title. [optional]
@@ -36,18 +48,18 @@ class Api:
         """
 
         payload = {
-            'apikey': self._apikey,
-            's': search_terms,
-            'i': imdb_id,
-            't': title,
-            'type': result_type,
-            'Season': season,
-            'Episode': episode,
-            'y': release_year,
-            'plot': plot,
-            'r': return_type,
-            'callback': callback,
-            'v': self._api_version
+            "apikey": self._apikey,
+            "s": search_terms,
+            "i": imdb_id,
+            "t": title,
+            "type": result_type,
+            "Season": season,
+            "Episode": episode,
+            "y": release_year,
+            "plot": plot,
+            "r": return_type,
+            "callback": callback,
+            "v": self._api_version,
         }
 
         response = requests.get(url=self._url, params=payload)
