@@ -8,10 +8,8 @@ Versions](https://img.shields.io/pypi/pyversions/omdbpy?style=for-the-badge&logo
 [![Coverage](https://img.shields.io/coveralls/github/blairg23/omdbpy?style=for-the-badge&logo=coverage)](https://coveralls.io/github/blairg23/omdbpy)
 [![License](https://img.shields.io/pypi/l/omdbpy?style=for-the-badge&logo=pypi)](https://github.com/blairg23/omdbpy)
 [![Code style:
-black](https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge)](https://github.com/psf/black)
+black](https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge&logo=black)](https://github.com/psf/black)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/blairg23/omdbpy?style=for-the-badge&logo=github)](https://github.com/blairg23/omdbpy/commits/)
-[![GitHub Latest Release](https://img.shields.io/github/release-date/blairg23/omdbpy?style=for-the-badge&logo=github)](https://github.com/blairg23/omdbpy/releases)
-[![GitHub Commits Since Last Release](https://img.shields.io/github/commits-since/blairg23/omdbpy/latest?style=for-the-badge&logo=github&label=Commits%20Since%20Last%20Release)](https://github.com/blairg23/omdbpy/commits/)
 
 # omdbpy
 
