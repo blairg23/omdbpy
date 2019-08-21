@@ -1,8 +1,4 @@
-coverage
-coveralls
 faker
 pytest
 pytest-cov
 tox
-tox-travis
-twine
